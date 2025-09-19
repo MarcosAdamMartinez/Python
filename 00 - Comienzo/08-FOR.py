@@ -11,3 +11,6 @@ for c in "hola mundo":
 
 for n in range (20,10,-1):
     print(n, end=", ")
+
+edad = input("Introduce tu edad:")
+print("Te faltan ",67 -int(edad)," años para jubilarte")

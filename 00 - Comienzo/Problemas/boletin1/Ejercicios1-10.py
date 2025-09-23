@@ -50,7 +50,7 @@ import random
 
 # Ejercicio 8
 # importe = float(input("Introduce un importe:\n"))
-# meses = float(input("Introduce un plazo:\n"))
+# meses = int(input("Introduce un plazo:\n"))
 # print("Tienes que pagar",round(importe/meses,2),"€ cada mes")
 
 # Ejercicio 9

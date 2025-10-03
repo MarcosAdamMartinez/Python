@@ -19,6 +19,12 @@ print(texto[:8])
 #Devuelve desde 3
 print(texto[3:])
 
+#Devuelve numeros pares
+print(texto[1::2])
+
+#Dar la vuelta al texto
+print(texto[::-1])
+
 #COnvertir numero a cadena(String):
 cadenaNumerica = str(3456.5)
 print(cadenaNumerica)
@@ -40,3 +46,4 @@ print(texto.replace("o","x"))
 
 #Sustituye solo el numero de veces que aparezca en el count:
 print(texto.replace("o","x",1))
+

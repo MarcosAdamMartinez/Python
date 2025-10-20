@@ -66,12 +66,12 @@
 
 #11. Validar NIE Y DNI
 # doc = input("Introduce un dni o nie:")
-# while len(doc) != 10:
+# while len(doc) != 9:
 #     doc = input("Introduce un dni o nie valido:")
 #
-# if doc[0:9].isdigit() and doc[9:].isalpha():
+# if doc[0:8].isdigit() and doc[8:].isalpha():
 #     print("El dni es valido")
-# elif doc[0:1].isalpha() and doc[1:9].isdigit() and doc[9:].isalpha():
+# elif doc[0:1].isalpha() and doc[1:8].isdigit() and doc[8:].isalpha():
 #     letra = doc[0:1]
 #     if letra.upper() == "X" or letra.upper() == "Y" or letra.upper() == "Z":
 #         print("El nie es valido")
@@ -81,14 +81,51 @@
 #     print("El dni no es valido")
 
 #12. Validar matricula
-matr = input("Introduce una matricula:")
-while len(matr) != 7:
-    matr = input("Introduce una matricula valido:")
-if matr[0:4].isdigit() and matr[4:].isalpha():
-    letras = matr[4:]
-    if "A" "E" "I" "O" "U" "Q" "Ñ" in letras.upper():
-        print("La matricula no es valida")
+# matr = input("Introduce una matricula:")
+# while len(matr) != 7:
+#     matr = input("Introduce una matricula valido:")
+# if matr[0:4].isdigit() and matr[4:].isalpha():
+#     letras = matr[4:]
+#     if "A" "E" "I" "O" "U" "Q" "Ñ" in letras.upper():
+#         print("La matricula no es valida")
+#     else:
+#         print("La matricula es valida")
+# else:
+#     print("La matricula no es valida")
+
+
+text = input("Ingresa tu mensaje: ")
+num = int(input("Ingrese el numero de desplazamiento: "))
+cipher = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) + num
+    if code > ord('Z'):
+        code = code - ord('Z')
+        if code > 9:
+            code = ord('A')
+    if code not in [1,2,3,4,5,6,7,8,9]:
+        cipher += chr(code)
     else:
-        print("La matricula es valida")
-else:
-    print("La matricula no es valida")
+        cipher += str(code)
+
+print(cipher)
+
+text = input("Ingresa tu mensaje a decodificar: ")
+numDecod = int(input("Ingrese el numero de desplazamiento: "))
+cipher = ''
+for char in text:
+    if not char.isalpha():
+        continue
+    char = char.upper()
+    code = ord(char) - numDecod
+    if code < ord('A'):
+        code = ord('Z')
+    if code not in [9,8,7,6,5,4,3,2,1]:
+        cipher += chr(code)
+    else:
+        cipher += str(code)
+
+print(cipher)

@@ -52,7 +52,7 @@ print(profesPrimero)
 # print(profesPrimero)
 
 #Converiones
-conjunto1 = set([1,2,3,2,2,4,4,4,5,1,6, 5])
+conjunto1 = set([1,2,3,2,2,4,4,4,5,1,6,5])
 print("\n")
 print(conjunto1)
 

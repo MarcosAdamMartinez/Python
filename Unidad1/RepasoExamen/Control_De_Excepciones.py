@@ -3,7 +3,7 @@
 
 try:
     num1 = int(input("Introduce el primer numero: "))
-    num2 = int(input("Introduce el primer numero: "))
+    num2 = int(input("Introduce el segundo numero: "))
     print(num1/num2)
 except ValueError:
     print("Algo de lo que has metido ta mal manin")
@@ -40,10 +40,10 @@ try:
     lista = input("Pasame una lista de numeros separados por \",\": ")
     lista.replace(" ","")
     nums = lista.split(",")
-    numero = list()
+    numeros = list()
     for num in nums:
-        numero.append(int(num))
-    print(numero)
+        numeros.append(int(num))
+    print(numeros)
 except ValueError:
     print("Tu ta loooco")
 
@@ -67,7 +67,7 @@ except IndexError:
 
 try:
     num1 = int(input("Introduce el primer numero: "))
-    num2 = int(input("Introduce el primer numero: "))
+    num2 = int(input("Introduce el segundo numero: "))
 except ValueError:
     print("Tu ta loooco x3")
 else:
@@ -78,10 +78,12 @@ else:
 # Ejercicio 6: Pide un número entre 1 y 10
 # si está fuera de rango
 # lanza un ValueError con tu propio mensaje personalizado
-
-num = int(input("Introduce un numero entre 1-10: "))
-if 1 > num < 10:
-    raise ValueError("Tas cagao bro")
+try:
+    num = int(input("Introduce un numero entre 1-10: "))
+    if 1 > num < 10:
+        raise ValueError("Tas cagao bro")
+except ValueError:
+    print("Miau")
 else:
     print("Ta bien👍")
 
@@ -106,6 +108,7 @@ else:
 
 def funcion(a, b):
     try:
+        print("Funcion: ")
         if b == 0:
             raise Exception("0")
         elif b < 0:
@@ -151,7 +154,7 @@ if len(palabraProhibida.split(" ")) == 1 :
         if  listaPalabras.count(palabraProhibida) != 0:
             for palabra in listaPalabras:
                 if palabra != palabraProhibida:
-                    fraseRecon += palabra
+                    fraseRecon += palabra+" "
                     for c in fraseRecon:
                         if c in ["'","[","]",","]:
                             fraseRecon = fraseRecon.replace(c,"")

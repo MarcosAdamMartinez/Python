@@ -42,6 +42,10 @@ mascota1 = Perro()
 mascota2 = Perro("Sultan")
 mascota3 = Perro("Tobby")
 
+print(mascota1.nombre)
+print(mascota2.nombre)
+print(mascota3.nombre)
+
 print(Perro.cuantosPerros())
 print(Perro.ladrar())
 print(mascota1.ladrar())

@@ -17,6 +17,10 @@ class ClaseB():
 
 # Cuando un metodo aparece en 2 clases, siempre se le da preferencia a la clase que esta a la izquierda cuando definimos la nueva clase:
 class ClaseC(ClaseA, ClaseB):
+    def queSoy(self):
+        ClaseA.queSoy(self)
+        ClaseB.queSoy(self)
+        print("Y ademas soy clase C")
     pass
 
 class ClaseD(ClaseB, ClaseA):

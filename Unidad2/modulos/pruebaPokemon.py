@@ -1,6 +1,6 @@
-from Unidad2.boletin11.pokemons import Pokemon
+from Unidad2.boletin11.PokemonsModulos import Pokemon
 
-p1 = Pokemon("Pikachu")
+p1 = Pokemon(1,"Pikachu","Electrico")
 
-p2 = Pokemon("Gengar")
-p1.combateContra(p2)
+p2 = Pokemon(2,"Gengar","Fantasma")
+p1.combate(p2)

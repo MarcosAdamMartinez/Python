@@ -11,6 +11,7 @@ class Pokemon:
         self.evolucion = evolucion
 
     def evoluciona(self):
+        pass
 
     def combateContra(self, contrincante):
         daño = random.randint(25, 100)
@@ -24,9 +25,3 @@ class Pokemon:
                 print("Ninguno de los 2 ha sido derrotado")
         else:
             print(self.__nombre,"ha ganado")
-
-
-p1 = Pokemon("Pikachu")
-
-p2 = Pokemon("Gengar")
-p1.combateContra(p2)

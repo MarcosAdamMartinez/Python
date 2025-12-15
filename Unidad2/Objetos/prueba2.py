@@ -92,4 +92,3 @@ c2 = Cuenta("Javier Puche", 5000)
 c1 = c1 + c2
 
 print(c1.titular)
-print(c1.saldo)

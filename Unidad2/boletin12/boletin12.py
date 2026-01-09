@@ -1,5 +1,5 @@
 """1. Queremos implementar una clase para gestionar una aplicación de gestión de notas. Cada
-nota tendrá cuatro elementos: título, descripción, color (debe de se amarillo, verde, blanco o
+nota tendrá cuatro elementos: título, descripción, color (debe de ser amarillo, verde, blanco o
 cyan para una futura implementación en un entorno gráfico) y fecha de creación.
 Necesitamos, además, añadir los siguientes métodos: crearNota, eliminarNota y listarNota
 No hace falta que hagas entradas por teclado: crea los métodos y pruébalos llamándolos
@@ -82,6 +82,8 @@ gestor.listarNotas()
 
 gestor.eliminarNota("Comprar pan")
 gestor.listarNotas()
+
+
 """2"""
 # ===============================
 # Clase abstracta NotaBase

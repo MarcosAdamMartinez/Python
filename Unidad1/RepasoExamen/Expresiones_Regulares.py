@@ -1,7 +1,7 @@
 import re
 
 # Ejercicio 1: Valida si una cadena es un codigo postal Español
-patron = r"^28[0-9]{3}"
+patron = r"28[0-9]{3}"
 
 if re.fullmatch(patron, "28530"):
     print("El codigo postal es valido")
